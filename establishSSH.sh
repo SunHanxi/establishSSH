@@ -43,10 +43,8 @@ genSSH ()
 {
 cat >genSSH.exp<<EOF
 #!/usr/bin/expect        
-# 使用spawn监控ssh免密登陆过程实现自动输入yes和密码
 spawn ssh-keygen
 expect {
-# 识别到是否接受时，输入yes，继续监控
 "*.ssh*" {send "\r"; exp_continue}
 "*y/n*" {send "y\r";}
 "*passphrase*" {send "\r";}
