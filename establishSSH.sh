@@ -1,6 +1,7 @@
 #!/bin/bash
 # 指定用户名
 USER=presto
+# 用户密码
 PSD=hx
 # 用户家目录
 USER_DIR=/home/presto
